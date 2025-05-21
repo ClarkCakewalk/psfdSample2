@@ -23,10 +23,10 @@ return new class extends Migration
             $table->tinyInteger('mail')->default(1);    //是否可寄信
             $table->tinyInteger('mode')->default(1);    //預設訪問途徑
             $table->string('liCode');   //訪問歸屬村里
-            $table->unsignedInteger('mainAdd'); //主地址Id
-            $table->unsignedInteger('mailAdd')->default(0);
-            $table->unsignedInteger('emailFirst')->default(0);
-            $table->unsignedInteger('imFirst')->default(0);
+            $table->unsignedBigInteger('mainAdd'); //主地址Id
+            $table->unsignedBigInteger('mailAdd')->default(0);
+            $table->unsignedBigInteger('emailFirst')->default(0);
+            $table->unsignedBigInteger('imFirst')->default(0);
             $table->timestamps();
         });
     }
